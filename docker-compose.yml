@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+
+  camilo:
+    restart: always
+    privileged: true
+    image: opsforge/camilo:latest
+    ports:
+      - 80:80
+    links:
+      - camilo-mysql:mysql
+    volumes:
+      - /Users/yeehaw/chamilo-lms/chamilo-lms-1.10.8/:/var/www/html/
+
+  camilo-mysql:
+    restart: always
+    image: mysql:5.5
+    environment:
+      - MYSQL_ROOT_PASSWORD=Standard1
+    ports:
+      - 3306:3306
+    volumes:
+      - /Users/yeehaw/chamilo-lms/mysql/:/var/lib/mysql/
