@@ -5,7 +5,7 @@ services:
   camilo:
     restart: always
     privileged: true
-    image: opsforge/camilo:latest
+    image: opsforge/chamilo:latest
     ports:
       - 80:80
     links:
