@@ -4,7 +4,7 @@ wget https://github.com/chamilo/chamilo-lms/releases/download/v1.10.8/chamilo-lm
 tar xvf chamilo-lms-1.10.8.tar.gz
 rm chamilo-lms-1.10.8.tar.gz
 cd ./dockerimage
-docker build -t 'opsforge/camilo:latest' .
+docker build -t 'opsforge/chamilo:latest' .
 cd ..
 docker-compose up -d
 
