@@ -7,11 +7,11 @@ services:
     privileged: true
     image: opsforge/chamilo:latest
     ports:
-      - 80:80
+      - 8001:80
     links:
       - camilo-mysql:mysql
     volumes:
-      - /Users/yeehaw/chamilo-lms/chamilo-lms-1.10.8/:/var/www/html/
+      - /home/vagrant/chamilo-docker/chamilo-lms-1.10.8/:/var/www/html/
 
   camilo-mysql:
     restart: always
@@ -21,4 +21,4 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - /Users/yeehaw/chamilo-lms/mysql/:/var/lib/mysql/
+      - /home/vagrant/chamilo-docker/mysql/:/var/lib/mysql/
