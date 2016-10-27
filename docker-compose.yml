@@ -19,6 +19,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=Standard1
     ports:
-      - 3306:3306
+      - 8306:3306
     volumes:
       - /home/vagrant/chamilo-docker/mysql/:/var/lib/mysql/
